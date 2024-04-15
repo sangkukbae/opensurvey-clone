@@ -159,6 +159,7 @@ function App() {
 					setIsLoading(false);
 				}
 			);
+		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, []);
 
 	useEffect(() => {
@@ -219,6 +220,7 @@ function App() {
 					}
 				);
 		}
+		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [filters]);
 
 	if (isLoading) {

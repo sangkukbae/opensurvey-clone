@@ -65,7 +65,7 @@ export default function WordCloud(item: FieldState) {
 					.join('text')
 					.style('font-size', d => `${d.size}px`)
 					.style('font-family', 'Impact')
-					.style('fill', (d, i) => fill(i.toString())) // Apply color using the color scale
+					.style('fill', (_, i) => fill(i.toString())) // Apply color using the color scale
 					.attr('text-anchor', 'middle')
 					.attr(
 						'transform',
@@ -79,6 +79,7 @@ export default function WordCloud(item: FieldState) {
 				svgElement.selectAll('*').remove();
 			}; // Cleanup SVG on component unmount
 		}
+		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, []);
 
 	return (
